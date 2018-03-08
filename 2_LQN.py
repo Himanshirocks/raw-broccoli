@@ -68,9 +68,12 @@ class DQN_Agent():
 			self.terminate = 1
 			self.environment_num = 2
 
-		self.train_epsilon = 0.5
+		self.train_epsilon_start = 1
+		self.train_epsilon_stop = 0.01
+		self.decay_rate = 0.0001  
 		self.train_evaluate_epsilon = 0.05
-		self.final_update = 30000
+		self.final_update = 0
+		self.last_iter = 120000
 		# episodes = 100
 
 		self.q_network = QNetwork(environment_name)
