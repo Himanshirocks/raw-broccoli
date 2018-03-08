@@ -8,6 +8,7 @@ from collections import deque
 import random
 from keras import initializers
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 from keras import backend as keras_back
 
 class QNetwork(): 
