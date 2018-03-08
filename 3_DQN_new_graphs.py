@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import matplotlib
+matplotlib.use('Agg')
 import keras, tensorflow as tf, numpy as np, gym, sys, copy, argparse
 from keras.layers import Dense
 from keras.models import Sequential, load_model
@@ -8,8 +10,7 @@ from collections import deque
 import random
 from keras import initializers
 import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('Agg')
+
 from keras import backend as keras_back
 
 class QNetwork(): 
@@ -122,7 +123,7 @@ class DQN_Agent():
 		episodes = []	
 
 		plt.ion()
-		plt.title('Training Progess')
+		plt.title('Training Progress')
 		plt.xlabel('Episodes')
 		plt.ylabel('Total Reward')	
 		plt.grid()
