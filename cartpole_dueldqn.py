@@ -292,9 +292,9 @@ class DQN_Agent():
 			plt.plot(model_num,avg_reward)
 			plt.grid()
 			plt.pause(0.001)
-			if avg_reward[(i//10000) - 1] == 200:
+			if avg_reward[(i//10000) - 1] >= 195:
 				count = count + 1
-			elif avg_reward[(i//10000) - 1] == 200 and count == 2:
+			elif avg_reward[(i//10000) - 1] >= 195 and count == 2:
 				break
 
 		plt.savefig("Average_Rewards.png")
