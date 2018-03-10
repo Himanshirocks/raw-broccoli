@@ -248,7 +248,7 @@ class DQN_Agent():
 		avg_reward = []
 		# load_dir = os.path.join(os.getcwd(), 'saved_models_dqn_replay')
 		# directory_name = 'models_for_CP_DuelDQN_eps_%f_to_%f_with_%f_decay1' %(self.train_epsilon_start,self.train_epsilon_stop,self.decay_rate)
-		load_dir = os.path.join(os.getcwd(), 'CP_duel_models_final_last')
+		load_dir = os.path.join(os.getcwd(), 'models_for_CP_DuelDQN_eps_1.000000_to_0.010000_with_0.000100_decay')
 		e = 0
 		i = 10000
 		count = 0
