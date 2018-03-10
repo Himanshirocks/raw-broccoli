@@ -3,7 +3,7 @@ import keras, tensorflow as tf, numpy as np, gym, sys, copy, argparse
 from keras.models import Sequential,load_model,Model
 from keras.layers import Input,Dense,Activation, merge, Lambda,Add
 from keras.optimizers import Adam
-from keras import backend as k
+from keras import backend as K
 from keras import initializers
 import os
 from collections import deque
