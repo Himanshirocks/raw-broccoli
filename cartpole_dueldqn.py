@@ -248,7 +248,7 @@ class DQN_Agent():
 		avg_reward = []
 		# load_dir = os.path.join(os.getcwd(), 'saved_models_dqn_replay')
 		# directory_name = 'models_for_CP_DuelDQN_eps_%f_to_%f_with_%f_decay1' %(self.train_epsilon_start,self.train_epsilon_stop,self.decay_rate)
-		load_dir = os.path.join(os.getcwd(), 'CP_duel_models_final')
+		load_dir = os.path.join(os.getcwd(), 'CP_duel_models_final_last')
 		e = 0
 		i = 10000
 		count = 0
@@ -260,7 +260,7 @@ class DQN_Agent():
 		plt.ylabel('Average Reward')	
 		plt.grid()
 
-		for i in range(10000, 130000 + 10000, 10000):
+		for i in range(10000, 100000 + 10000, 10000):
 			# model_name = 'lqn_%d_%d_model.h5' %(self.environment_num,i)
 			model_name = 'dqn_%d_model.h5' %(i)
 			filepath = os.path.join(load_dir, model_name)
@@ -348,8 +348,8 @@ def main(args):
 	environment_name = args.env
 	dqn_agen = DQN_Agent(environment_name)
 
-	dqn_agen.train()
-	# dqn_agen.test()
+	# dqn_agen.train()
+	dqn_agen.test()
 
 	# You want to create an instance of the DQN_Agent class here, and then train / test it. 
 
